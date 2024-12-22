@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>oda</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">Oda</div>
+    <nav>
+      <ul>
+        <li><a href="#">COURSE</a></li>
+        <li><a href="#">DOWNLOAD</a></li>
+        <li><a href="#">JOIN US</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </nav>
+ </header>
+ <!-- Content -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Pioneer & Exclusive <br> K12 Online LIVE Learning Platform</h1>
+      <p>Achieve brilliance with AI-driven interactive classes led by IIT experts.</p>
+    </div>
+  </section> 
+ 
+
+
+<!-- Video --> 
+  <section class="effect">
+    <div  class="circle-ring"></div>
+  <div class="title">Outstanding Curriculum</div>
+  <div class="video-section">
+    <% videos.forEach(video => { %>
+      <div class="video-card">
+        <iframe
+        width="50%"
+        height="315"
+        src="<%= video.videoLink.replace('watch?v=', 'embed/') %>"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+        <p><%= video.description %></p>
+      </div>
+    <% }); %>
+  </div>
+ 
+    <div class="features">
+      <div class="feature-box ">Full-scale Study<br>All Subjects for Class 1-11</div>
+      <div class="feature-box ">3I LIVE Class<br>Interactive, Innovative, Immersive</div>
+      <div class="feature-box ">Systematic Structure<br>Gradual Depth to Build Solid Foundation</div>
+  </div>  
+  </section>
+  <!-- Slider -->
+  <section class="teachslide">
+  <div class="carousel-container">
+    <h3 class="carousel-title">Expert Teaching Team</h3>
+    <div class="carousel-ring">
+      <% team.forEach(member => { %>
+        <div class="teacher-card">
+          <img src="<%= member.image %>" alt="<%= member.name %>">
+          <div class="card-info">
+            <h4><%= member.name %></h4>
+            <p><%= member.subject %></p>
+            <p><%= member.experience %> 5 Years Teaching <br> Maths</p>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+    
+    <!-- <div class="carousel-ring">
+       Teacher Cards 
+      <div class="teacher-card" data-index="0">
+        <img src="https://static-online.odaedu.com/oda-website/img/0adcba4.png" alt="Abhishek">
+        <div class="card-info">
+          <h4>Abhishek</h4>
+          <p>IIT.D | Maths</p>
+          <p>6 Years Teaching</p>
+        </div>
+      </div>
+      <div class="teacher-card" data-index="1">
+        <img src="https://static-online.odaedu.com/oda-website/img/72a0701.png" alt="Nitin">
+        <div class="card-info">
+          <h4>Nitin</h4>
+          <p>IIT.K | Physics</p>
+          <p>8 Years Teaching</p>
+        </div>
+      </div>
+      <div class="teacher-card" data-index="2">
+        <img src="https://static-online.odaedu.com/oda-website/img/7712934.png" alt="Arvind">
+        <div class="card-info">
+          <h4>Arvind</h4>
+          <p>IIT.R | Maths</p>
+          <p>10 Years Teaching</p>
+        </div>
+      </div>
+      <div class="teacher-card" data-index="3">
+        <img src="https://static-online.odaedu.com/oda-website/img/1a107c6.png" alt="Rucha">
+        <div class="card-info">
+          <h4>Rucha</h4>
+          <p>NIT.S | Maths</p>
+          <p>6 Years Teaching</p>
+        </div>
+      </div>
+      <div class="teacher-card" data-index="4">
+        <img src="https://static-online.odaedu.com/oda-website/img/a34edc9.png" alt="Vikas">
+        <div class="card-info">
+          <h4>Vikas</h4>
+          <p>NIT.S | Maths</p>
+          <p>Oda Star Teachers</p>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  </section>
+  
+  <section>
+    <div class="teachingfooter">
+      <div class="stat">
+        <h2>1% Pass Rate</h2>
+        <p>Strict Selection Criteria</p>
+      </div>
+      <div class="stat">
+        <h2>IIT/NIT</h2>
+        <p>Top-tier Expert Teacher</p>
+      </div>
+      <div class="stat">
+        <h2>95%+ Like Rate</h2>
+        <p>Strict Ability Standard</p>
+      </div>
+    </div>
+  </section>
+<!-- Ring
+  <section class="learning-model">
+    <h1 class="title">Systematical Learning Model</h1>
+    <div class="content">
+      
+      <div class="left">
+        <img src="https://static-online.odaedu.com/oda-website/img/a7a6c27.png" alt="Teacher" class="teacher-image">
+      </div>
+    </section> -->
+
+
+<!-- Swiper -->
+<div class="slider-content">
+    <h1>AI Powered Technological LIVE Class</h1>
+    <p>Rich Badge Incentives</p>
+</div>
+
+<div class="swiper">
+    <div class="swiper-wrapper">
+       
+        <div class="swiper-slide">
+            <img src="/images/slider11.avif" alt="Class Space">
+        </div>
+        
+        <div class="swiper-slide">
+            <img src="/images/slider12.avif" alt="Badge Incentives">
+        </div>
+  
+        <div class="swiper-slide">
+            <img src="/images/slider13.avif" alt="Study Report">
+        </div>
+    </div>
+    
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+<!-- Reviews -->
+    <section class="reviews-header">
+      <div class="rev-leaf">
+      <img src="/images/leftleaf.png" alt="left leaf" class="leaf"> 
+      <h1>Trusted by 10,000,00 <br>Best Rated with 4.6 <i class="fa-solid fa-star" style="color: #FFD43B;"></i></h1> <img src="/images/rightleaf.png" alt="right leaf" class="leaf"> 
+    </div>
+      <br>
+      <p class="para">Better Teacher, Better Future  </p>
+    </section>
+    <section class="reviews">
+        <div class="review-card">
+            <p><img src="/images/child.webp" alt="boy" class="icon-img"> My son's grades improved, thank you! <i class="fa-solid fa-star" style="color: #FFD43B;"></i> <i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i></p>
+        </div>
+        <div class="review-card">
+            <p> <img src="/images/child.webp" alt="boy" class="icon-img"><i class="fa-solid fa-face-smile" style="color: #FFD43B;">  </i>Simple interface, easy to operate, kids love it.</p>
+        </div>
+        <div class="review-card">
+            <p> Rich learning resources, meet different needs. <i class="fa-solid fa-hand" style="color: #fcc897;"></i>  </p>
+        </div>
+        <div class="review-card">
+            <p> Reasonable course price, low burden on parents. </p>
+        </div>
+        <div class="review-card">
+          <p>Simple interface, easy to operate, kids love it.</p>
+      </div>
+      <div class="review-card">
+          <p>Rich learning resources, meet different needs.</p>
+      </div>
+      <div class="review-card">
+          <p>Reasonable course price, low burden on parents. </p>
+      </div>
+    </section> 
+
+    <!-- Button -->
+  <section class="join">
+    <div class="button-container">
+        <button class="button">View Courses</button>
+        <button class="button">Download Apps</button>
+    </div>
+  </section>
+  <!-- Footer  -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/terms">Terms & Conditions</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/refund">Refund</a>
+      <a href="/disclaimer">Disclaimer</a>
+      <a href="/contact">Contact Us</a>
+    </div>
+    <div class="footer-copyright">
+      <p>Copyright &copy;2024 Oda Class. All rights reserved.</p>
+    </div>
+  </footer>
+
+<!-- JavaScript -->
+
+<!-- Navbar -->
+  <script>
+    const header = document.querySelector('header'); 
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) { 
+            header.classList.add('scrolled'); 
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>   
+
+<!-- Slider -->
+ <script>
+  const cards = document.querySelectorAll('.teacher-card');
+const totalCards = cards.length;
+
+function positionCards() {
+  const angleStep = 360 / totalCards; 
+  cards.forEach((card, index) => {
+    const angle = angleStep * index;
+   
+
+     card.style.transform = `rotateY(${angle}deg) translateZ(250px)`; 
+  });
+}
+
+positionCards();
+ </script>
+
+<!-- Swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar
+    <aside class="sidebar">
+      <h2>Admin Panel</h2>
+      <nav>
+        <ul>
+          <li><a href="#slider-section"><i class="fa-solid fa-image"></i> Slider Section</a></li>
+          <li><a href="#teaching-team"><i class="fa-solid fa-users"></i> Teaching Team</a></li>
+          <li><a href="#video-section"><i class="fa-solid fa-video"></i> Video Section</a></li>
+          <li><a href="/admin/logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+        </ul>
+      </nav>
+    </aside> -->
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="header">
+        <h1>Welcome, Admin</h1>
+      </header>
+
+      <section id="hero-section" class="section">
+        <h2>Slider Section</h2>
+        <form action="/slider" method="POST">
+          <input type="text" name="backgroundImage" placeholder="Background Image URL" required>
+          <input type="text" name="heading" placeholder="Heading" required>
+          <textarea name="description" placeholder="Description" required></textarea>
+          <button type="submit">Add to Slider Section</button>
+        </form>
+      </section>
+
+      <section id="teaching-team" class="section">
+        <h2>Teaching Team</h2>
+        <form action="/teaching_team" method="POST">
+          <input type="text" name="image" placeholder="Image URL" required>
+          <textarea name="description" placeholder="Description" required></textarea>
+          <button type="submit">Add to Teaching Team</button>
+        </form>
+      </section>
+
+      <section id="video-section" class="section">
+        <h2>Video Section</h2>
+        <form action="/video" method="POST">
+          <input type="text" name="videoLink" placeholder="Video Link" required>
+          <textarea name="description" placeholder="Description" required></textarea>
+          <button type="submit">Add to Video Section</button>
+        </form>
+      </section>
+
+      <section id="view-data" class="section">
+        <h2>View Data</h2>
+        <div class="links">
+          <a href="/slider">View Slider Section</a>
+          <a href="/teaching_team">View Teaching Team</a>
+          <a href="/video">View Video Section</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
